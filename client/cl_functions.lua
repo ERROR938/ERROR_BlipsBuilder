@@ -55,8 +55,6 @@ function getAllBlips()
 
     ESX.TriggerServerCallback("error:getAllBlips", function(blips)
 
-        print(json.encode(blips))
-
         if blips then all_blips = blips end
         
     end)

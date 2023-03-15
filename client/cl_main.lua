@@ -60,7 +60,9 @@ mainMenu.Events = {
 
         end
 
-        if btn.name == "~g~Valider le blip" then 
+        if btn.name == "~g~Valider le blip" then
+
+            if not blip.id or not blip.color or not blip.name or not blip.pos then ESX.ShowNotification("~rInformations manquantes") return end
 
             TriggerServerEvent("error:CreateBlip", blip)
 
